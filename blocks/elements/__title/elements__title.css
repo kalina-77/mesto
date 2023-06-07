@@ -1,0 +1,9 @@
+.elements__title {
+  background-color: white;
+  color: #000;
+  border-radius: 0 0 5px 5px;
+  margin: 0;
+  padding: 0;
+  max-height: 79px;
+  display: flex;
+}
