@@ -1,10 +1,10 @@
 .popup__submit {
   width: 358px;
-  min-height: 50px;
+  min-height: 46px;
   background-color: #000;
   color: #fff;
   border: 0;
-  margin: 17px 0 0;
+  margin: 25px 0 0;
   padding: 0;
   cursor: pointer;
 }
@@ -17,6 +17,6 @@
   .popup__submit {
     width: 238px;
     font-size: 14px;
-    margin: 15px 0 0 0;
+    margin: 18px 0 0 0;
   }
 }

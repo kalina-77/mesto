@@ -22,9 +22,10 @@ popupElement.addEventListener('click', handleClick);
 
 // Конец 1.
 
-// 2. Редактрирование профиля пользователя
+// 2. Редактирование профиля пользователя
 
 // Задаем переменные
+
 let userName = document.querySelector('.profile__name');
 let userDesc = document.querySelector('.profile__desc');
 
@@ -39,12 +40,12 @@ let formElement = document.querySelector('.popup__form');
 let nameInput = document.querySelector('.popup__input_name');
 let descInput = document.querySelector('.popup__input_desc');
 
-// Функция отмены отправки формы
+// Функция отмены отправки формы, так как нет сервера
 
 function handleFormSubmit(evt) {
   evt.preventDefault();
 
-  // Вставляем новые значения
+  // Вставляем новые текстовые данные из формы в переменные
 
   userName.textContent = nameInput.value;
   userDesc.textContent = descInput.value;
