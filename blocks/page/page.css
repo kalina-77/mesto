@@ -9,7 +9,7 @@
 }
 
 @media screen and (max-width: 540px) {
-  .header {
+  .page {
     max-width: 320px;
   }
 }

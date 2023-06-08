@@ -1,44 +1,28 @@
-// 1. Открытие/закрытие окна редактирования профиля пользователя
+// 1. Открытие/закрытие окна и редактирования профиля пользователя
 
-// Задаем константы
+// Задаем константы и переменные
 
 const editProfileButtonElement = document.querySelector('.profile__edit-button');
 const closeProfileButtonElement = document.querySelector('.popup__close-button');
 const popupElement = document.querySelector('.popup');
+let userName = document.querySelector('.profile__name');
+let userDesc = document.querySelector('.profile__desc');
+let formElement = document.querySelector('.popup__form');
+let nameInput = document.querySelector('.popup__input_type_name');
+let descInput = document.querySelector('.popup__input_type_desc');
 
-// Сама функция открытия-закрытия окна
+// Функция открытия-закрытия окна
 
 function handleClick(e) {
   if (e.target === e.currentTarget) {
     popupElement.classList.toggle('popup_opened');
+
+    // Подстановка исходных значений в форму
+
+    nameInput.value = userName.textContent;
+    descInput.value = userDesc.textContent;
   }
 }
-
-// Слушаем click на элементах
-
-editProfileButtonElement.addEventListener('click', handleClick);
-closeProfileButtonElement.addEventListener('click', handleClick);
-popupElement.addEventListener('click', handleClick);
-
-// Конец 1.
-
-// 2. Редактирование профиля пользователя
-
-// Задаем переменные
-
-let userName = document.querySelector('.profile__name');
-let userDesc = document.querySelector('.profile__desc');
-
-// Подставляем исходные значения в форму
-
-document.getElementById('name-input').value = userName.textContent;
-document.getElementById('desc-input').value = userDesc.textContent;
-
-// Задаем переменные формы и полей формы
-
-let formElement = document.querySelector('.popup__form');
-let nameInput = document.querySelector('.popup__input_name');
-let descInput = document.querySelector('.popup__input_desc');
 
 // Функция отмены отправки формы, так как нет сервера
 
@@ -58,4 +42,8 @@ function handleFormSubmit(evt) {
 
 formElement.addEventListener('submit', handleFormSubmit);
 
-// Конец 2.
+// Слушаем click на элементах
+
+editProfileButtonElement.addEventListener('click', handleClick);
+closeProfileButtonElement.addEventListener('click', handleClick);
+popupElement.addEventListener('click', handleClick);

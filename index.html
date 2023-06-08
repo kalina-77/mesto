@@ -18,82 +18,80 @@
         <img class="profile__avatar" src="./images/user-photo.jpg" alt="Аватар пользователя" />
         <div class="profile__info">
           <div class="profile__title">
-            <p class="profile__name">Жак-Ив Кусто</p>
-            <button class="profile__edit-button"></button>
+            <h1 class="profile__name">Жак-Ив Кусто</h1>
+            <button class="profile__edit-button" type="button"></button>
           </div>
           <p class="profile__desc">Исследователь океана</p>
         </div>
-        <button class="profile__add-button"></button>
+        <button class="profile__add-button" type="button"></button>
       </section>
       <section class="elements" aria-label="Фотогалерея пользователя">
         <div class="elements__element">
           <img class="elements__image" src="./images/karachaevsk-photo.jpg" alt="Фото Карачаевск" />
           <div class="elements__title">
-            <p class="elements__text">Карачаевск</p>
-            <button class="elements__like"></button>
+            <h2 class="elements__text">Карачаевск</h2>
+            <button class="elements__like" type="button"></button>
           </div>
         </div>
         <div class="elements__element">
           <img class="elements__image" src="./images/elbrus-photo.jpg" alt="Фото Эльбрус" />
           <div class="elements__title">
-            <p class="elements__text">Гора Эльбрус</p>
-            <button class="elements__like"></button>
+            <h2 class="elements__text">Гора Эльбрус</h2>
+            <button class="elements__like" type="button"></button>
           </div>
         </div>
         <div class="elements__element">
           <img class="elements__image" src="./images/dombai-photo.jpg" alt="Фото Домбай" />
           <div class="elements__title">
-            <p class="elements__text">Домбай</p>
-            <button class="elements__like"></button>
+            <h2 class="elements__text">Домбай</h2>
+            <button class="elements__like" type="button"></button>
           </div>
         </div>
         <div class="elements__element">
           <img class="elements__image" src="./images/elbrus-photo.jpg" alt="Фото Карачаевск" />
           <div class="elements__title">
             <p class="elements__text">Гора Эльбрус</p>
-            <button class="elements__like"></button>
+            <button class="elements__like" type="button"></button>
           </div>
         </div>
         <div class="elements__element">
           <img class="elements__image" src="./images/dombai-photo.jpg" alt="Фото Карачаевск" />
           <div class="elements__title">
-            <p class="elements__text">Домбай</p>
-            <button class="elements__like"></button>
+            <h2 class="elements__text">Домбай</h2>
+            <button class="elements__like" type="button"></button>
           </div>
         </div>
         <div class="elements__element">
           <img class="elements__image" src="./images/karachaevsk-photo.jpg" alt="Фото Карачаевск" />
           <div class="elements__title">
-            <p class="elements__text">Карачаево-Черкесия</p>
-            <button class="elements__like"></button>
+            <h2 class="elements__text">Карачаево-Черкесия</h2>
+            <button class="elements__like" type="button"></button>
           </div>
         </div>
       </section>
     </main>
-    <footer class="footer">&copy; 2023 Mesto Russia</footer>
+    <footer class="footer"><p class="footer__content">&#169;2023 Mesto Russia</p></footer>
     <aside class="popup">
       <div class="popup__window">
-        <button class="popup__close-button"></button>
+        <button class="popup__close-button" type="button"></button>
         <div class="popup__content">
           <h2 class="popup__title">Редактировать профиль</h2>
-          <form class="popup__form">
+          <form class="popup__form" name="user-data">
             <input
               id="name-input"
-              name="userName"
-              class="popup__input popup__input_name"
+              name="user-name"
+              class="popup__input popup__input_type_name"
               type="text"
-              value=""
               required
             />
             <input
               id="desc-input"
-              name="userDesc"
-              class="popup__input popup__input_desc"
+              name="user-desc"
+              class="popup__input popup__input_type_desc"
               type="text"
-              value=""
               required
             />
-            <button class="popup__submit">Сохранить</button>
+            <button class="popup__submit" type="submit">Сохранить</button>
           </form>
         </div>
       </div>

@@ -6,18 +6,16 @@
   font-style: normal;
   margin: 0;
   padding: 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 320px;
 }
 
 @media screen and (max-width: 740px) {
   .profile__name {
-    font-size: 32px;
-    line-height: 1.22;
-  }
-}
-
-@media screen and (max-width: 670px) {
-  .profile__name {
     font-size: 27px;
     line-height: 1.22;
+    max-width: calc(100% - 20px);
   }
 }
