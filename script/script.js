@@ -16,9 +16,11 @@ let descInput = document.querySelector('.popup__input_type_desc');
 function handleClick(e) {
   if (e.target === e.currentTarget) {
     popupElement.classList.toggle('popup_opened');
+  }
 
-    // Подстановка исходных значений в форму
+  // Подстановка исходных значений в форму
 
+  if (e.currentTarget === editProfileButtonElement) {
     nameInput.value = userName.textContent;
     descInput.value = userDesc.textContent;
   }
@@ -38,11 +40,12 @@ function handleFormSubmit(evt) {
 
   popupElement.classList.toggle('popup_opened');
 }
-// Обработчик формы (вызов функции обработки формы)
+
+// Обработчик формы (вызов функции)
 
 formElement.addEventListener('submit', handleFormSubmit);
 
-// Слушаем click на элементах
+// Обработчик открытия/закрытия окна (вызов функции)
 
 editProfileButtonElement.addEventListener('click', handleClick);
 closeProfileButtonElement.addEventListener('click', handleClick);

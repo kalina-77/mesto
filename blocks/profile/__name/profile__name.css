@@ -12,7 +12,15 @@
   max-width: 320px;
 }
 
-@media screen and (max-width: 740px) {
+@media screen and (max-width: 840px) {
+  .profile__name {
+    font-size: 30px;
+    line-height: 1.22;
+    max-width: 250px;
+  }
+}
+
+@media screen and (max-width: 540px) {
   .profile__name {
     font-size: 27px;
     line-height: 1.22;

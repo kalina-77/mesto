@@ -8,13 +8,20 @@
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  max-width: 400px;
+  max-width: 320px;
+}
+
+@media screen and (max-width: 840px) {
+  .profile__desc {
+    font-size: 14px;
+    max-width: 250px;
+  }
 }
 
 @media screen and (max-width: 640px) {
   .profile__desc {
     font-size: 14px;
-    margin: 8px 0 0 0;
-    max-width: 300px;
+    margin: 8px auto 0;
+    max-width: 200px;
   }
 }

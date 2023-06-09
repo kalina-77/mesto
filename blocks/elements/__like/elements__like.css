@@ -5,10 +5,11 @@
   padding: 0;
   cursor: pointer;
   background-image: url(../../../images/element-like.svg);
-  background-color: #fff;
+  background-color: transparent;
   background-repeat: no-repeat;
   border: 0;
+  outline: 0;
 }
 .elements__like:hover {
-  opacity: 0.6;
+  opacity: 0.5;
 }
