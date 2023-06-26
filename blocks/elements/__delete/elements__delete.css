@@ -1,16 +1,17 @@
-.elements__like {
+.elements__delete {
   width: 22px;
   height: 19px;
-  margin: 30px 20px 30px auto;
   padding: 0;
   cursor: pointer;
-  background-image: url(../../../images/element-like.svg);
+  background-image: url(../../../images/element-delete.svg);
   background-color: transparent;
   background-repeat: no-repeat;
   border: 0;
   outline: 0;
+  position: absolute;
+  top: 20px;
+  right: 20px;
 }
-
-.elements__like:hover {
+.elements__delete:hover {
   opacity: 0.5;
 }

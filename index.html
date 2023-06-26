@@ -25,50 +25,7 @@
         </div>
         <button class="profile__add-button" type="button"></button>
       </section>
-      <section class="elements" aria-label="Фотогалерея пользователя">
-        <div class="elements__element">
-          <img class="elements__image" src="./images/karachaevsk-photo.jpg" alt="Фото Карачаевск" />
-          <div class="elements__title">
-            <h2 class="elements__text">Карачаевск</h2>
-            <button class="elements__like" type="button"></button>
-          </div>
-        </div>
-        <div class="elements__element">
-          <img class="elements__image" src="./images/elbrus-photo.jpg" alt="Фото Эльбрус" />
-          <div class="elements__title">
-            <h2 class="elements__text">Гора Эльбрус</h2>
-            <button class="elements__like" type="button"></button>
-          </div>
-        </div>
-        <div class="elements__element">
-          <img class="elements__image" src="./images/dombai-photo.jpg" alt="Фото Домбай" />
-          <div class="elements__title">
-            <h2 class="elements__text">Домбай</h2>
-            <button class="elements__like" type="button"></button>
-          </div>
-        </div>
-        <div class="elements__element">
-          <img class="elements__image" src="./images/elbrus-photo.jpg" alt="Фото Карачаевск" />
-          <div class="elements__title">
-            <p class="elements__text">Гора Эльбрус</p>
-            <button class="elements__like" type="button"></button>
-          </div>
-        </div>
-        <div class="elements__element">
-          <img class="elements__image" src="./images/dombai-photo.jpg" alt="Фото Карачаевск" />
-          <div class="elements__title">
-            <h2 class="elements__text">Домбай</h2>
-            <button class="elements__like" type="button"></button>
-          </div>
-        </div>
-        <div class="elements__element">
-          <img class="elements__image" src="./images/karachaevsk-photo.jpg" alt="Фото Карачаевск" />
-          <div class="elements__title">
-            <h2 class="elements__text">Карачаево-Черкесия</h2>
-            <button class="elements__like" type="button"></button>
-          </div>
-        </div>
-      </section>
+      <section class="elements" aria-label="Фотогалерея пользователя"></section>
     </main>
     <footer class="footer"><p class="footer__content">&#169;2023 Mesto Russia</p></footer>
     <aside class="popup">
@@ -83,6 +40,9 @@
               class="popup__input popup__input_type_name"
               type="text"
               required
+              placeholder="Ваше имя"
+              minlength="2"
+              maxlength="200"
             />
             <input
               id="desc-input"
@@ -90,12 +50,50 @@
               class="popup__input popup__input_type_desc"
               type="text"
               required
+              placeholder="Ваш род занятий"
             />
             <button class="popup__submit" type="submit">Сохранить</button>
           </form>
         </div>
       </div>
     </aside>
+    <aside class="popup popup_add-photo">
+      <div class="popup__window">
+        <button class="popup__close-button popup__close-button_photo" type="button"></button>
+        <div class="popup__content">
+          <h2 class="popup__title">Новое место</h2>
+          <form class="popup__form" name="add__photo">
+            <input
+              id="place-input"
+              name="place-name"
+              class="popup__input popup__input_type_place"
+              type="text"
+              required
+              placeholder="Название"
+            />
+            <input
+              id="link-input"
+              name="place-link"
+              class="popup__input popup__input_type_link"
+              type="text"
+              required
+              placeholder="Ссылка на картинку"
+            />
+            <button class="popup__submit popup__submit_photo" type="submit">Сохранить</button>
+          </form>
+        </div>
+      </div>
+    </aside>
+    <template id="card-photo">
+      <div class="elements__element">
+        <img class="elements__image" src="#" alt="" />
+        <button class="elements__delete"></button>
+        <div class="elements__title">
+          <h2 class="elements__text"></h2>
+          <button class="elements__like" type="button"></button>
+        </div>
+      </div>
+    </template>
     <script src="./script/script.js"></script>
   </body>
 </html>
