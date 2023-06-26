@@ -100,18 +100,23 @@ document.querySelectorAll('.elements__like').forEach(likePhotoElement => {
   });
 });
 
+document.querySelectorAll('.elements__delete').forEach(deleteElement => {
+  deleteElement.addEventListener('click', () => {
+    const photoCard = deleteElement.closest('.elements__element');
+    photoCard.remove();
+  });
+});
 // Функция добавления фото
 
 function submitPhoto(evt) {
   // Отмена отправки формы на сервер
 
   evt.preventDefault();
-  const text = placeNameInput.value;
-  const link = placePhotoInput.value;
+
   const cardElement = cardTemplate.querySelector('.elements__element').cloneNode(true);
-  cardElement.querySelector('.elements__image').src = link;
-  cardElement.querySelector('.elements__image').alt = text;
-  cardElement.querySelector('.elements__text').textContent = text;
+  cardElement.querySelector('.elements__image').src = placePhotoInput.value;
+  cardElement.querySelector('.elements__image').alt = placeNameInput.value;
+  cardElement.querySelector('.elements__text').textContent = placeNameInput.value;
   photoElements.prepend(cardElement);
   placeNameInput.value = '';
   placePhotoInput.value = '';
