@@ -12,13 +12,10 @@ let formElement = document.querySelector('.popup__form');
 let nameInput = document.querySelector('.popup__input_type_name');
 let descInput = document.querySelector('.popup__input_type_desc');
 const cardTemplate = document.querySelector('#card-photo').content;
-const photoElement = document.querySelector('.elements');
+const photoElements = document.querySelector('.elements');
 const submitPhotoElement = document.querySelector('.popup__submit_photo');
-const placePhotoInput = document.querySelector('.popup__input_type_place');
-const placeNameInput = document.querySelector('.popup__input_type_link');
-const likePhotoElement = document.querySelectorAll('.elements__like');
-
-// ПР5
+const placePhotoInput = document.querySelector('.popup__input_type_link');
+const placeNameInput = document.querySelector('.popup__input_type_place');
 
 const initialCards = [
   {
@@ -54,7 +51,7 @@ initialCards.forEach(place => {
   cardElement.querySelector('.elements__image').src = place.link;
   cardElement.querySelector('.elements__image').alt = place.name;
   cardElement.querySelector('.elements__text').textContent = place.name;
-  photoElement.append(cardElement);
+  photoElements.append(cardElement);
 });
 
 // Функция открытия-закрытия окна редактирования профиля пользователя
@@ -79,12 +76,12 @@ function handleFormSubmit(evt) {
 
   evt.preventDefault();
 
-  // Вставляем новые текстовые данные из формы в переменные
+  // Подстановка новых текстовых данных из формы в переменные
 
   userName.textContent = nameInput.value;
   userDesc.textContent = descInput.value;
 
-  // Закрываем окно
+  // Закрытие окна
 
   popupElement.classList.toggle('popup_opened');
 }
@@ -109,6 +106,16 @@ function submitPhoto(evt) {
   // Отмена отправки формы на сервер
 
   evt.preventDefault();
+  const text = placeNameInput.value;
+  const link = placePhotoInput.value;
+  const cardElement = cardTemplate.querySelector('.elements__element').cloneNode(true);
+  cardElement.querySelector('.elements__image').src = link;
+  cardElement.querySelector('.elements__image').alt = text;
+  cardElement.querySelector('.elements__text').textContent = text;
+  photoElements.prepend(cardElement);
+  placeNameInput.value = '';
+  placePhotoInput.value = '';
+  photoEditElement.classList.toggle('popup_opened');
 }
 
 // Обработчик открытия/закрытия окна редактирования данных пользователя
@@ -126,6 +133,6 @@ formElement.addEventListener('submit', handleFormSubmit);
 addPhotoButtonElement.addEventListener('click', photoAdd);
 closePhotoButtonElement.addEventListener('click', photoAdd);
 
-// Обработчик добавления фото
+// Обработчик добавления новых фото
 
 submitPhotoElement.addEventListener('click', submitPhoto);
